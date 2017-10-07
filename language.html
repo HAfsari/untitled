@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>Language List</title>
-    <!--script src="Src/js/custom.js"></script-->
+    <script src="Src/js/custom.js"></script>
     <script src="Src/js/angular.js"></script>
     <script src="Src/js/tech.js"></script>
     <link rel="stylesheet" href="Src/css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="Src/css/fontawesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="Src/css/main.css">
+    <script src="Src/css/bootstrap/js/bootstrap.min.js"></script>
+    <script src="Src/js/jquery/jquery-3.2.1.min.js"></script>
 
 
 </head>
-<body ng-app="techmodel">
+<body ng-app="techmodel" class="container">
 
-<table ng-controller="techcont" class="fa-columns">
+<table ng-controller="techcont" class="table table-bordered ">
 
     <thead>
           <th>Name</th>
           <th>Likes</th>
           <th>Dislike</th>
           <th>Spin</th>
-    <th>Like/Dislike</th>
+    <th class="row col-sm-4">Like/Dislike</th>
 
     </thead>
             <br>
@@ -32,6 +34,7 @@
             <td align="right">{{tech.DisLike}}</td>            |
             <td class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></td>
             <td>
+
                 <button type="button"  ng-click="increment(tech)"><i class="fa fa-thumbs-up"></i>Like</button>
                 <button type="button" ng-click="dislike(tech)"><i class="fa fa-thumbs-down"></i>Dislike</button>
                 <!--input type="button" value="like"    ng-click="increment(tech)"-->
