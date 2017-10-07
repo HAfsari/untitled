@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Language List</title>
+    <!--script src="Src/js/custom.js"></script-->
+    <script src="Src/js/angular.js"></script>
+    <script src="Src/js/tech.js"></script>
+    <link rel="stylesheet" href="Src/css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Src/css/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Src/css/main.css">
+
+
+</head>
+<body ng-app="techmodel">
+<table ng-controller="techcont">
+    <thead>
+          <th>Name</th>
+          <th>Likes</th>
+          <th>Dislike</th>
+    <th>Like/Dislike</th>
+
+    </thead>
+            <br>
+    <tbody>
+        <tr ng-repeat="tech in techv">
+            <td align="center">{{tech.name}}</td>
+            <td align="right">{{tech.Like}}</td>
+            <td align="right">{{tech.DisLike}}</td>
+            <td>
+                <input type="button" value="like"  class="fa fa-thumbs-up"  ng-click="increment(tech)">
+                <input type="button"  value="Dislike" ng-click="dislike(tech)" class="fa fa-low-vision">
+
+            </td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+</body>
+<script src="Src/css/bootstrap/js/bootstrap.js"></script>
+</html>

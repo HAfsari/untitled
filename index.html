@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Angular Tutorial</title>
+  <script src="Src/js/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <link rel="stylesheet" href="Src/css/main.css">
+  <script src="Src/js/custom.js"></script>
+  <script src="Src/js/list.js"></script>
+  <script src="Src/js/customts.ts"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css' rel='stylesheet'>
+</head>
+
+<body ng-app="newmodel">
+  <div ng-controller="newcont">
+    First Name: <input type="text" value={{emp.fname}} class="fa fa-address-card"> <br> Change Name : {{emp.fname}}<br> Last Name : {{emp.lname}}<br> Gender : {{emp.genger}} <br> Age : {{emp.age}}
+
+  </div>
+  <div ng-controller="image">
+    Country : {{ima.cname}}<br> City : {{ima.city}}<br>
+    <!--Flag : <img src="{{ima.image}}" alt="{{ima.cname}}" style="height: auto">-->
+  </div>
+  <div ng-controller="emp">
+    <table>
+      <tr>
+        <td>
+          Name :<input class="fa fa-address-card" type="text" ng-model="hremp.hname"><br>
+        </td>
+        <td>
+          Last Name :<input type="text" ng-model="hremp.hlname"><br>
+        </td>
+
+      </tr>
+      <br>
+      <tr>
+        <td>
+          Name : {{hremp.hname}}
+        </td>
+        <br>
+        <td class="fa fa-arrow-circle-o-down ">
+          Last Name : {{hremp.hlname}}
+        </td><br>
+
+
+
+
+      </tr>
+    </table>
+  </div>
+</body>
+
+</html>

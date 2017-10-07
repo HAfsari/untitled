@@ -1,0 +1,29 @@
+#name {
+    background: rebeccapurple;
+    font-family: Tahoma;
+    font-style: italic;
+}
+
+#broder {
+    background: #f9ff87;
+    border: double;
+    border-color: #2a52ff;
+}
+
+#button {
+    vertical-align: 10px;
+    background: rebeccapurple;
+    right: 100ch;
+ align-content: stretch;
+}
+
+table, th, td tbody {
+    border: 2px solid black;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+    background-color: cornsilk;
+}

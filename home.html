@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Employee List</title>
+    <script src="Src/js/angular.js"></script>
+    <script src="Src/js/list.js"></script>
+    <link rel="stylesheet" href="Src/css/main.css">
+</head>
+<body ng-app="listmodel">
+<table ng-controller="listcont" id="broder">
+    <thead>
+    <th>Sl. No.</th>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Age</th>
+    <th>Salary</th>
+    </thead>
+    <tbody>
+    <tr ng-repeat="emplist in emplist">
+        <td>{{$index}}</td>
+        <td>{{emplist.fname}}</td>
+        <td> {{emplist.lname}}</td>
+        <td>{{emplist.age}}</td>
+        <td><input type="password" ng-model="salary" value=0 ng-required="salary"></td>
+        <td>{{salary}}</td>
+    </tr>
+    </tbody>
+</table>
+<input type="button" value="Submit" title="Save" >
+</body>
+</html>
