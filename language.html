@@ -13,11 +13,14 @@
 
 </head>
 <body ng-app="techmodel">
-<table ng-controller="techcont">
+
+<table ng-controller="techcont" class="fa-columns">
+
     <thead>
           <th>Name</th>
           <th>Likes</th>
           <th>Dislike</th>
+          <th>Spin</th>
     <th>Like/Dislike</th>
 
     </thead>
@@ -26,10 +29,13 @@
         <tr ng-repeat="tech in techv">
             <td align="center">{{tech.name}}</td>
             <td align="right">{{tech.Like}}</td>
-            <td align="right">{{tech.DisLike}}</td>
+            <td align="right">{{tech.DisLike}}</td>            |
+            <td class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></td>
             <td>
-                <input type="button" value="like"  class="fa fa-thumbs-up"  ng-click="increment(tech)">
-                <input type="button"  value="Dislike" ng-click="dislike(tech)" class="fa fa-low-vision">
+                <button type="button"  ng-click="increment(tech)"><i class="fa fa-thumbs-up"></i>Like</button>
+                <button type="button" ng-click="dislike(tech)"><i class="fa fa-thumbs-down"></i>Dislike</button>
+                <!--input type="button" value="like"    ng-click="increment(tech)"-->
+                <!--input type="button"  value="Dislike" ng-click="dislike(tech)" class="fa fa-low-vision"-->
 
             </td>
         </tr>
